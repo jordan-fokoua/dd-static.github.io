@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iframe</title>
+  </head>
+  <body>
+    <h1>Iframe</h1>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const qParam = urlParams.get('qParam');
+      document.body.innerHTML += `<p>qParam: ${qParam || 'Not Found'}</p>`;
+      console.log('Query Parameters:', window.location.search);
+    </script>
+  </body>
+</html>
