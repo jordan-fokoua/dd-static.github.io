@@ -7,9 +7,7 @@
     <h1>Iframe</h1>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      const qParam = urlParams.get('qParam');
-      document.body.innerHTML += `<p>qParam: ${qParam || 'Not Found'}</p>`;
-      console.log('Query Parameters:', window.location.search);
+      document.body.innerHTML += `<p>Iframe query params: ${urlParams || 'Not Found'}</p>`;
     </script>
   </body>
 </html>

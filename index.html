@@ -5,6 +5,17 @@
   </head>
   <body>
     <h1>Top Frame</h1>
-    <iframe id="testIframe" src="https://jordan-fokoua.github.io/safari-iframe-test/iframe.html?captcha=12345&inter=123&qParam=json" width="800" height="800" style="border: 1px solid black"> </iframe>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      document.body.innerHTML += `<p>qParent query params: ${urlParams || 'Not Found'}</p>`;
+    </script>
+    <iframe
+      id="testIframe"
+      src="https://jordan-fokoua.github.io/safari-iframe-test/iframe.html?captcha=12345&inter=123&qParam=json"
+      width="800"
+      height="800"
+      style="border: 1px solid black"
+    >
+    </iframe>
   </body>
 </html>
